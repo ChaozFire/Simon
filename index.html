@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="http://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <title>Simon Says Demo</title>
+  </head>
+  <body bgcolor="#000000">
+    <h1 class="centeredHead" style="color:white"> SIMON </h1>
+    <div id="grid" class="centered">
+      <p id="intro" style="color:white;"> Click the start button to play the game! </p>
+      <p id="score" class="centeredText" style="display:none"> score: {{score}} </p>
+      <input type="button" class="button centeredButton" id="animate" value="Start">
+      <div id="row1" class="row">
+        <div id="squareRed" class="square red" v-on:click="squareClick(0)"></div>
+        <div id="squareBlue" class="square blue" v-on:click="squareClick(1)"></div>
+      </div>
+      <div id="row2" class="row">
+        <div id="squareGreen" class="square green" v-on:click="squareClick(2)"></div>
+        <div id="squareYellow" class="square yellow" v-on:click="squareClick(3)"></div>
+      </div>
+    </div>
+
+    <script src="SimonSaysRules.js"></script>
+  </body>
+</html>
